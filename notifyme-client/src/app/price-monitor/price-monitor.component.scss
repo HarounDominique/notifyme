@@ -1,0 +1,60 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f5f5f5; /* Color de fondo suave */
+  font-family: 'Arial', sans-serif;
+}
+
+.container {
+  width: 100%;
+  max-width: 600px; /* Ancho máximo de la barra de búsqueda */
+  padding: 20px;
+}
+
+.search-form {
+  display: flex;
+  justify-content: center; /* Centra la barra de búsqueda horizontalmente */
+  position: relative; /* Necesario para el botón */
+}
+
+.search-input {
+  width: 100%; /* Ocupa todo el ancho del contenedor */
+  padding: 15px; /* Espaciado interno */
+  border: 1px solid #ccc; /* Borde suave */
+  border-radius: 25px; /* Bordes redondeados */
+  font-size: 16px; /* Tamaño de fuente */
+  transition: border-color 0.3s; /* Transición suave para el borde */
+}
+
+.search-input:focus {
+  outline: none; /* Sin borde de enfoque predeterminado */
+  border-color: #a100ff; /* Color de borde en enfoque */
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.64); /* Sombra en enfoque */
+}
+
+.search-button {
+  position: absolute;
+  right: 10px; /* Ajusta la posición según sea necesario */
+  top: 50%; /* Centrar verticalmente */
+  transform: translateY(-50%); /* Ajustar para centrar */
+  padding: 8px 12px;
+  background-color: rgba(0, 123, 255, 0.64); /* Cambia el color según necesites */
+  color: white;
+  border: none;
+  border-radius: 25px; /* Bordes redondeados */
+  opacity: 0; /* Inicialmente oculto */
+  transition: opacity 0.3s ease; /* Efecto de transición */
+  cursor: pointer;
+
+  &.fade-in {
+    opacity: 1; /* Muestra el botón */
+  }
+}

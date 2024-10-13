@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Minimalist Search Bar</title>
+  <link rel="stylesheet" href="price-monitor.component.scss">
+</head>
+<body>
+<div class="container">
+  <form class="search-form" (submit)="searchProduct()">
+    <input
+      type="text"
+      class="search-input"
+      placeholder="Ingrese URL"
+      (input)="onUrlInput($event)"
+      required
+    />
+    <button
+      *ngIf="isValidUrl"
+      class="search-button fade-in"
+      (click)="searchProduct()"
+      type="button"
+    >
+      Buscar Producto
+    </button>
+  </form>
+</div>
+</body>
+</html>
